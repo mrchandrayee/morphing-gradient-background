@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#aebbd1">
+  <title>Morphing Gradient Background</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="tags" aria-label="Technology"><span>#MZcode</span><span>#HTML</span><span>#CSS</span></nav>
+    <header>
+      <h1>Morphing Gradient Background</h1>
+      <p>More video on youtube: <strong>@mzcode01</strong></p>
+    </header>
+
+    <section class="demo" aria-label="Animated morphing gradient">
+      <div class="morphing-bg"></div>
+    </section>
+
+    <section class="code-card">
+      <div class="dots"><i></i><i></i><i></i><b>HTML</b></div>
+      <pre><code>&lt;div class="morphing-bg"&gt;&lt;/div&gt;</code></pre>
+    </section>
+
+    <section class="code-card css-card">
+      <div class="dots"><i></i><i></i><i></i><b>CSS</b></div>
+      <pre><code>.morphing-bg {
+  width: 750px;
+  height: 300px;
+  background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite, morph 5s ease infinite;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+  box-shadow: 5px 15px 20px 0 rgba(0, 0, 0, 0.4);
+  border: 2.5px solid #eee;
+}
+
+/* Animation keyframes added to make the displayed CSS runnable */
+@keyframes gradient {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 20px; transform: perspective(900px) rotateX(0deg) rotateY(0deg); }
+  25%      { border-radius: 35% 20% 30% 18%; transform: perspective(900px) rotateX(2deg) rotateY(-3deg); }
+  50%      { border-radius: 20px 38% 18% 32%; transform: perspective(900px) rotateX(-2deg) rotateY(3deg); }
+  75%      { border-radius: 28% 18% 36% 20%; transform: perspective(900px) rotateX(1deg) rotateY(-2deg); }
+}</code></pre>
+    </section>
+    <p class="note">Check description for source codes!</p>
+    <footer>HTML · CSS · NO FRAMEWORK REQUIRED</footer>
+  </main>
+</body>
+</html>
